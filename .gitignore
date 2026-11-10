@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.local
+supabase/functions/.env
+supabase/.branches
+supabase/.temp
+ml-service/data/
+ml-service/app/models/
+ml-service/reports/
+__pycache__/
+.venv/
+.supabase-token
+.supabase.token
+.twilio.env
+.claude/

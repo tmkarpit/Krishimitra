@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "KrishiMitra",
+    "slug": "krishimitra",
+    "scheme": "krishimitra",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "in.rubix.krishimitra",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "KrishiMitra uses your location to find your farm on the map.",
+        "NSMicrophoneUsageDescription": "KrishiMitra uses the microphone so you can ask questions by voice.",
+        "NSCameraUsageDescription": "KrishiMitra uses the camera to check crop diseases and read soil health cards.",
+        "NSPhotoLibraryUsageDescription": "KrishiMitra lets you choose crop photos from your gallery."
+      }
+    },
+    "android": {
+      "package": "in.rubix.krishimitra",
+      "adaptiveIcon": {
+        "backgroundColor": "#E8F5E9",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO",
+        "CAMERA"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      [
+        "expo-audio",
+        { "microphonePermission": "KrishiMitra uses the microphone so you can ask questions by voice." }
+      ],
+      [
+        "expo-location",
+        { "locationWhenInUsePermission": "KrishiMitra uses your location to find your farm on the map." }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "KrishiMitra lets you choose crop photos from your gallery.",
+          "cameraPermission": "KrishiMitra uses the camera to check crop diseases and read soil health cards."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
